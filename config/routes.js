@@ -49,7 +49,7 @@ module.exports.routes = {
 	'/content/view/:id': {
 		controller: 'Content',
 		action: 'view',
-		skipAssets: true
+		skipAssets: false
 	}
 	
 };

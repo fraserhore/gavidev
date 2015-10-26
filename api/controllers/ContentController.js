@@ -37,7 +37,7 @@ module.exports = {
 				object = {};
 			object['identityNode'] = row && row[0];
 			object['versionNode'] = row && row[2];
-			object['layout'] = '';
+			object['layout'] = 'layout';
 			return res.view("full", object);
 		}
 		cypher(query,params,cb);
