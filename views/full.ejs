@@ -1,6 +1,5 @@
-<h1>
-    <%= identityNode.name %>
-</h1>
-<div><%= versionNode.description %></div>
 
-<my-greeting greeting="<%= versionNode.description %>"></my-greeting>
+<content-full identity-node='<%-JSON.stringify(identityNode)%>' version-node='<%-JSON.stringify(versionNode)%>'></content-full>
+<script type="text/javascript">
+console.log(JSON.parse('<%-JSON.stringify(versionNode)%>'));
+</script>

@@ -1,0 +1,57 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="content-full">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    
+    <h1>{{identityNode.name}}</h1>
+    <div>{{versionNode.description}}</div>
+
+    <h4>Add a Folder</h4>
+
+    <form is="iron-form" id="formPost" method="post" action="/">
+      <paper-input name="name" label="Name" required></paper-input>
+      <br>
+      <paper-textarea name="description" label="Description"></paper-textarea>
+      <br>
+      <paper-button raised onclick="clickHandler(event)">Submit</paper-button>
+    </form>
+
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'content-full',
+
+      properties: {
+        identityNode: {
+          type: Object,
+          value: function() { return {}; },
+          notify: true
+        },
+        versionNode: {
+          type: Object,
+          value: function() { return {}; },
+          notify: true
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>
